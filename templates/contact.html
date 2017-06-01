@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+{% load crispy_forms_tags %}
+{% include 'css.html' %}
+
+
+ <div id="wrapper">
+{% include 'navbar.html' %}
+
+
+<div class="container">
+<div class="row">
+  <div class="col-md-4 col-sm-offset-2">
+
+		<form method='POST' action=''>{% csrf_token %}
+
+			{{ form |crispy }}
+
+		<input class='btn btn-primary' type="submit" value="Submit">
+	
+		</form>
+
+</div>
+</div>
+</div>	
+      
+
+
+
+               
+
+
+{% include 'javascript.html' %}

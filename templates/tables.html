@@ -1,0 +1,100 @@
+{% load staticfiles %}
+
+{% include 'css.html' %}
+
+ <div id="wrapper">
+
+{% include 'navbar.html' %}
+
+       
+
+      <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Tables</h1>                  
+                
+                        
+                    
+                
+               
+
+            </div>
+                        <h2> Constructions Sites</h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Time  </th>
+                                        <th>Id </th>
+                                        
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for construct in construction %}
+                                    <tr class="danger">
+                                        <td>{{ construct.name }}</td>
+                                        <td>{{ construct.type }}</td>
+                                        <td>{{ construct.timestamp }}</td>
+                                        <td>{{ construct.osm_id}}</td>
+                                        
+                                        
+                                    <tr>
+                                        {% endfor %}
+                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                <hr>
+                    <div class="table-responsive">
+                        <h2>Accidents</h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Locations</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for accidents in accidents %}
+                                    <tr class="success">
+                                         <td>{{ accidents.locations }}</td>
+                                        <td>{{ accidents.type }}</td>
+                                        <td>{{ accidents.description }}</td>
+                                        <td>{{ accidents.date }}</td>
+                                        
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{% load staticfiles %}
+{% load leaflet_tags %}
+{% include 'css.html' %}
+
+<style media="screen">
+         #twitter-timeline{ width: 100%; height: 100% }
+     </style>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+       {% include 'navbar.html' %}
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Twitter
+                            <small>Timeline</small>
+                        </h1>
+                        
+                    </div>
+                </div>
+             <a class="twitter-timeline" href="https://twitter.com/gisapptraffic">Tweets by gisapptraffic</a>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+  
+
+{% include 'javascript.html' %}
